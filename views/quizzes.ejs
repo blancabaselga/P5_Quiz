@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quizzes</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Los quizzes en la base de datos son : </h1>
+	<ul>
+	<!-- https://meanoob.wordpress.com/2015/01/26/probando-ejs-embedded-javascript-templates/ -->
+	<!-- Para instrucciones de control hay que usar <% %> en vez de <%= %> que lo que hace es ejecutar el javascript en vez de mostrarlo -->
+
+    <% for (var i in quizzes) { %>
+    <% var quiz = quizzes[i]; %>
+        <li>
+            <%= quiz.question%> : <%= quiz.answer %>
+        </li>
+    <% } %>
+</ul>
+  </body>
+</html>
